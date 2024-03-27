@@ -2,7 +2,7 @@ import pyautogui as pyautogui
 import time
 
 #abre uma mensagem de alerta avisando que o software vai rodar
-pyautogui.alert('O CÓDIGO VAI COMEÇAR A RODAR! TIRE AS MÃOS DO TELADO E DO MOUSE, POIS AMBOS SERÃO CONTROLADOS POR UM BOT AGORA!')
+pyautogui.alert('O CÓDIGO VAI COMEÇAR A RODAR! TIRE AS MÃOS DO TECLADO E DO MOUSE, POIS AMBOS SERÃO CONTROLADOS POR UM BOT AGORA!')
 time.sleep(1)
 
 #           ATENÇÃO!       
@@ -43,6 +43,16 @@ time.sleep(1)
 
 pyautogui.hotkey('win', '7') #muda para janela da planilha (colocar planilha na sétima posição na barra de tarefas)
 time.sleep(1)
+
+#MOVE MOUSE PARA OPÇÃO DE SELEÇÃO DE TABELA INTEIRA
+pyautogui.moveTo(17, 199, 1) #(x=17, y=199)
+time.sleep(1)
+pyautogui.click(button='left')
+time.sleep(1)
+
+
+#SELECIONA ÁREA ESPECÍFICA NA PLANILHA PARA SER REALIZA A PESQUISA
+'''
 pyautogui.moveTo(117, 298, 1) #move mouse para a primeira célula para selecionar a pesquisa na planilha (x=117, y=298)
 time.sleep(1)
 pyautogui.click(button='left')
@@ -55,7 +65,6 @@ pyautogui.moveTo(1355, 611, 1) # desse a barra de rolagem até o final da planil
 time.sleep(1)    
 pyautogui.mouseUp(1355, 611) #solta o clique do mouse 
 time.sleep(1)  
-
 pyautogui.keyDown('shiftleft') #pressiona a tecla shift esquerda para selecionar
 time.sleep(1)
 pyautogui.keyDown('shiftright') #pressiona a tecla shift direita para selecionar
@@ -68,8 +77,11 @@ pyautogui.keyUp('shiftleft') #solta a tecla shift esquerda
 time.sleep(1)
 pyautogui.keyUp('shiftright') #solta a tecla shift direita 
 time.sleep(1)
+'''
 
-#ABRIR JANELA DE PESQUISA NA PLANILHA DE ACORDO COM A ÁREA SELECIONADA
+
+
+#ABRIR JANELA DE PESQUISA NA PLANILHA DE ACORDO COM A ÁREA SELECIONADA (pressiona atelhgo SHIFT+F5)
 pyautogui.keyDown('shiftleft') #pressiona a tecla shift esquerda para selecionar
 time.sleep(1)
 pyautogui.keyDown('shiftright') #pressiona a tecla shift direita para selecionar
@@ -142,6 +154,15 @@ while(x<6): #lógica de laço de repetição
 
     pyautogui.hotkey('win', '7') #muda para janela da planilha (colocar planilha na sétima posição na barra de tarefas)
     time.sleep(1)
+
+    #MOVE MOUSE PARA OPÇÃO DE SELEÇÃO DE TABELA INTEIRA
+    pyautogui.moveTo(17, 199, 1) #(x=17, y=199)
+    time.sleep(1)
+    pyautogui.click(button='left')
+    time.sleep(1)
+
+    #SELECIONA ÁREA ESPECÍFICA NA PLANILHA PARA SER REALIZA A PESQUISA
+    '''
     pyautogui.moveTo(117, 298, 1) #move mouse para a primeira célula para selecionar a pesquisa na planilha (x=117, y=298)
     time.sleep(1)
     pyautogui.click(button='left')
@@ -154,7 +175,6 @@ while(x<6): #lógica de laço de repetição
     time.sleep(1)    
     pyautogui.mouseUp(1355, 611) #solta o clique do mouse 
     time.sleep(1)  
-
     pyautogui.keyDown('shiftleft') #pressiona a tecla shift esquerda para selecionar
     time.sleep(1)
     pyautogui.keyDown('shiftright') #pressiona a tecla shift direita para selecionar
@@ -167,8 +187,10 @@ while(x<6): #lógica de laço de repetição
     time.sleep(1)
     pyautogui.keyUp('shiftright') #solta a tecla shift direita 
     time.sleep(1)
+    '''
 
-    #ABRIR JANELA DE PESQUISA NA PLANILHA DE ACORDO COM A ÁREA SELECIONADA
+
+    #ABRIR JANELA DE PESQUISA NA PLANILHA DE ACORDO COM A ÁREA SELECIONADA (pressiona atelhgo SHIFT+F5)
     pyautogui.keyDown('shiftleft') #pressiona a tecla shift esquerda para selecionar
     time.sleep(1)
     pyautogui.keyDown('shiftright') #pressiona a tecla shift direita para selecionar
